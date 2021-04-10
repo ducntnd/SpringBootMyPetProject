@@ -1,0 +1,48 @@
+.hot p{
+	font-weight: bold;
+    color: #000;
+    font-size: 24px;
+}
+.hot{
+	width: fit-content;
+}
+.hot div{
+	height: 3px;
+	background: red;
+	width: 50%;
+}
+.a p:nth-child(2){
+	text-align: left;
+	width: 90%;
+}
+.a p:first-child{
+	    color: green;
+	    font-size: 45px;
+	    width: 10%;
+}
+.side-bar{
+	background: #C4C4C4;
+	padding: 10px;
+}
+.schedule-result .title{
+	font-size: 25px;
+	color: #F3EBEB;
+	background: #5811EE;
+	display: block;
+}
+.block{
+	background: #FFFAFA;
+}
+.block .date{
+	background: #C4C4C4;
+	text-align: center;
+}
+.ratio{
+	background: #FE0808;
+	text-align: center;
+	color: #FEF2F2;
+	font-weight: bold;
+}
+.result{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}

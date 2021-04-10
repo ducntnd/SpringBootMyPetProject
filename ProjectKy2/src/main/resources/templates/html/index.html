@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragment/header :: head(~{:: #css-title})">
+    <th:block id="css-title">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}"/>
+    </th:block>
+</head>
+<body>
+<header th:replace="fragment/header :: header"></header>
+<div class="container">
+    <div class="displaynone row">
+    </div>
+</div>
+<main>
+    <section class="container">
+        <div class="row">
+            <a href="/news/{id}" class="col-12 first-line h-auto">
+                <div class="d-lg-flex flex-md-column flex-lg-row align-items-center justify-content-between img-main">
+                    <img src="https://www.thenational.ae/image/policy:1.938467:1573965050/08002099.jpg?f=16x9&w=1200&$p$f$w=258f6a0"
+                         alt="">
+                    <div class="pl-lg-4 p-3 d-flex flex-column justify-content-around">
+                        <p class="category mb-3">Bóng đá</p>
+                        <p class="title">Anh em nhà Hazard bùng nổ, Bỉ huỷ diệt Nga</p>
+                    </div>
+                </div>
+            </a>
+            <div class="mt-4 row justify-content-between">
+                <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto">
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                        <img src="../../static/images/Rectanglekhac.jpg" class="w-100" alt="">
+                        <div class="d-flex flex-column justify-content-around a">
+                            <p class="category">Bóng bầu dục</p>
+                            <p class="title">Jones: Anh có thể truyền cảm hứng cho quốc gia</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto">
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                        <img src="../../static/images/Rectangle10khac.jpg" class="w-100" alt="">
+                        <div class="d-flex flex-column justify-content-around a">
+                            <p class="category">Bóng đá</p>
+                            <p class="title">Xhaka giải thích sự tức giận với người hâm mộ Arsenal</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto">
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                        <img src="../../static/images/Rectangle%201.jpg" class="w-100" alt="">
+                        <div class="d-flex flex-column justify-content-around a">
+                            <p class="category">Bóng đá</p>
+                            <p class="title">Giải ngoại hạng Anh - 10 trận trong</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="latest">
+        <div class="container flex-column align-items-center">
+            <p class="block">Tin mới nhất</p>
+            <div class="row justify-content-between">
+                <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto">
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                        <img src="../../static/images/late1.jpg" class="w-100" alt="">
+                        <div class="p-2 d-flex flex-column justify-content-around a">
+                            <p class="category">Bóng đá</p>
+                            <p class="title">Giấy tờ: Arsenal chiến đấu với Man City vì Isco</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto">
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                        <img src="../../static/images/late2.jpg" class="w-100" alt="">
+                        <div class="p-2 d-flex flex-column justify-content-around a">
+                            <p class="category">Golf</p>
+                            <p class="title">WGC-HSBC Champions: Latest leaderboard</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto">
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                        <img src="../../static/images/late3.jpg" class="w-100" alt="">
+                        <div class="p-2 d-flex flex-column justify-content-around a">
+                            <p class="category">Bóng đá</p>
+                            <p class="title">Giải ngoại hạng Anh - 10 trận trong</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto">
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                        <img src="https://e0.365dm.com/20/01/768x432/skysports-coco-gauff-tennis_4892877.jpg?20200116082949"
+                             class="w-100" alt="">
+                        <div class="p-2 d-flex flex-column justify-content-around a">
+                            <p class="category">Tennis</p>
+                            <p class="title">Coco đối mặt với Venus tại Ausie Open</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto">
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                        <img src="https://e2.365dm.com/19/07/384x216/skysports-ms-dhoni-india-cricket_4714557.jpg?20200116114034"
+                             class="w-100" alt="">
+                        <div class="p-2 d-flex flex-column justify-content-around a">
+                            <p class="category">Bóng chày</p>
+                            <p class="title">Dhoni mất hợp đồng trung ương Ấn Độ</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto">
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                        <img src="https://e0.365dm.com/19/02/768x432/skysports-wes-brown-ole-gunnar-solskjaer_4575899.jpg?20200115183320"
+                             class="w-100" alt="">
+                        <div class="p-2 d-flex flex-column justify-content-around a">
+                            <p class="category">Bóng đá</p>
+                            <p class="title">Solskjaer đang đem lại giá trị cho Man Utd</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="video">
+        <div class="container">
+            <p class="block">Video</p>
+            <div class="row justify-content-between">
+                <a href="doctinvideo.html" class="col-lg-6 col-md-12 first-line h-auto">
+                    <div class="d-flex flex-column align-items-center h-100">
+                        <img src="https://cdn.24h.com.vn/upload/1-2020/images/2020-01-15/Video-highlight-tran-Inter-Milan---Cagliari-Choi-loi-Lukaku-dai-tiec-5-ban-man-nhan-i2-1579041994-564-width660height432.jpg"
+                             class="w-100" style="height: 60%;" alt="">
+                        <i class="far fa-play-circle fa-3x"
+                           style="position: absolute; bottom:35%; left: 10%; transform: translateX(-50%) translateY(-50%); color:white;"></i>
+                        <div class="p-2 d-flex flex-column a">
+                            <p class="title">Video Highlight: Cagliari & Inter Milan</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="col-lg-6 col-md-12 first-line h-auto">
+                    <div class="d-flex flex-column align-items-center h-100">
+                        <img src="../../static/images/video2.jpg" class="w-100 100" style="height: 60%;" alt="">
+                        <div class="p-2 d-flex flex-column a">
+                            <p class="title">Saracens không cần bán cầu thủ</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="mt-4 row justify-content-between">
+                    <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="../../static/images/video3.jpg" class="w-100" alt="">
+                            <div class="p-2 d-flex flex-column a">
+                                <p class="title">Giải thích: Vụ bê bối lương của Saracens</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="../../static/images/video4.jpg" class="w-100" alt="">
+                            <div class="p-2 d-flex flex-column a">
+                                <p class="title">SSN trong 60 giây</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="../../static/images/video5.jpg" class="w-100" alt="">
+                            <div class="p-2 d-flex flex-column a">
+                                <p class="title">#Toe2Toe - ngày 6 tháng 11</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pundits">
+        <div class="container flex-column align-items-center">
+            <p class="block">Chuyên gia</p>
+            <div class="row justify-content-between">
+                <a href="tinchuyengia.html" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto pt-2">
+                    <div class="h-100 d-flex flex-column justify-content-around align-items-center">
+                        <div class="d-flex flex-column justify-content-between align-items-center">
+                            <img src="../../static/images/Ellipse%203.jpg" class="w-100" alt="">
+                            <p class="category">Charlie Nicolas</p>
+                        </div>
+                        <p class="title m-4 w-100 text-center">Dự đoán về giải bóng đá ngoại hạng Anh của Charlie</p>
+                    </div>
+                </a>
+                <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto pt-2">
+                    <div class="h-100 d-flex flex-column justify-content-around align-items-center">
+                        <div class="d-flex flex-column justify-content-between align-items-center">
+                            <img src="../../static/images/Ellipse%205.jpg" class="w-100" alt="">
+                            <p class="category">Nasser Husain</p>
+                        </div>
+                        <p class="title m-4 w-100 text-center">Hussain:bowling ở Anh thật tuyệt vời</p>
+                    </div>
+                </a>
+                <a href="#" class="col-lg-4 col-sm-12 col-md-6 first-line h-auto pt-2">
+                    <div class="h-100 d-flex flex-column justify-content-around align-items-center">
+                        <div class="d-flex flex-column justify-content-between align-items-center">
+                            <img src="../../static/images/Ellipse%204.jpg" class="w-100" alt="">
+                            <p class="category">David Prutton</p>
+                        </div>
+                        <p class="title m-4 w-100 text-center">Dự đoán về giải EFL của Prutton</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer th:replace="fragment/footer :: footer"></footer>
+
+</body>
+</html>

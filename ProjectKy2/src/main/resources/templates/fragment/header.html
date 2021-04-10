@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(csstitle)">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{/vendor/fontawesome/css/all.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{css/components/header.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{css/components/footer.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{css/components/sidebar.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login-modal.css}"/>
+    <link rel="stylesheet" th:href="@{/vendor/fontawesome/css/all.min.css}"/>
+    <link rel="shortcut icon" type="image/jpg" th:href="@{/images/logo.jpg}"/>
+    <th:block th:replace="${csstitle} ?: ~{}"></th:block>
+</head>
+<body>
+<header th:fragment="header">
+    <button class="fixed" style="position: fixed; bottom:5px; right:5px; width: 50px; height: 50px; z-index: 200;"><img
+            th:src="@{/images/Captures.PNG}"></img></button>
+    <div class="head">
+        <div class="container d-flex justify-content-between">
+            <a href="/" class="dit">
+                <img th:src="@{/images/logo.jpg}" alt="">
+                <p class="sky ml-2 mr-1">SKY</p>
+                <p class="sports">THỂ THAO</p>
+            </a>
+            <div class="d-flex align-items-center account" th:if="${user == null}">
+                <button type="button" data-toggle="modal" data-target="#loginModal">
+                    Đăng nhập
+                </button>&nbsp;
+                <p style="margin-bottom: 0 !important;">/</p>&nbsp;
+                <button type="button" data-toggle="modal" data-target="#signInModal">
+                    Đăng ký
+                </button>&nbsp;
+            </div>
+            <div class="d-flex align-items-center account" th:if="${user != null}">
+                <a href="/post" class="button-round">Viết bài</a>&nbsp;&nbsp;
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" height="21px" version="1.1" viewBox="0 0 18 21"
+                     width="18px" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M7.0119539,3.2075415 L7.40027579,2.72017306 C4.28893812,3.43312094 2.01737858,6.27353318 2.01737858,9.52932402 L2.01737858,15.0482984 L2.16302114,14.6955509 L0.863966411,16.0005345 C0.162266719,16.7054368 0.531485356,17.5551982 1.51846633,17.5551982 L16.5021867,17.5551982 C17.4956337,17.5551982 17.8593786,16.7064336 17.1566866,16.0005345 L15.8576319,14.6955509 L16.0032744,15.0482984 L16.0032744,9.52932402 C16.0032744,6.27355389 13.7316876,3.43312678 10.620379,2.72017347 L11.0086991,3.2075415 L11.0086991,2.50517483 C11.0086991,1.37651058 10.1361479,0.5 9.0103265,0.5 C7.88450511,0.5 7.0119539,1.37651058 7.0119539,2.50517483 L7.0119539,3.2075415 Z M9.0103265,1.5 C9.5828471,1.5 10.0086991,1.92778437 10.0086991,2.50517483 L10.0086991,3.2075415 L10.0086991,3.60592637 L10.3970192,3.69490954 C13.0546055,4.30389283 15.0032744,6.74053842 15.0032744,9.52932402 L15.0032744,15.0482984 L15.0032744,15.2547386 L15.148917,15.4010459 L16.4479717,16.7060295 C16.5179593,16.7763365 16.6127299,16.5551982 16.5021867,16.5551982 L1.51846633,16.5551982 C1.41129622,16.5551982 1.50595615,16.7730592 1.5726813,16.7060295 L2.87173603,15.4010459 L3.01737858,15.2547386 L3.01737858,15.0482984 L3.01737858,9.52932402 C3.01737858,6.74051695 4.96602042,4.30388871 7.62363201,3.69490995 L8.0119539,3.60592788 L8.0119539,3.2075415 L8.0119539,2.50517483 C8.0119539,1.92778437 8.43780589,1.5 9.0103265,1.5 Z"></path>
+                        <rect height="1.66015625" width="2.57819185" x="7.71090407" y="18.4190193"></rect>
+                    </g>
+                </svg>&nbsp;&nbsp;
+                <a class="username nav-link dropdown-toggle" href="#" id="userInfor" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="text" th:text="${user.fullname}"></span>
+                    <span class="icon">
+						<svg height="10" viewBox="0 0 1000 1000" width="10" x="0px" y="0px">
+							<g><path
+                                    d="M133.1,254.6l366.8,352.1L871.4,250l0,0c12.6-11.7,29.7-18.8,48.6-18.8c38.7,0,70,30.1,70,67.2c0,18.1-7.5,34.6-19.6,46.6l0,0l-420,403.2l0,0c-12.7,12.7-30.6,20.6-50.4,20.6c0,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c-19.8,0-37.6-7.9-50.4-20.6l0,0l-420-403.2l0.2-0.2c-12-12.1-19.5-28.4-19.5-46.5c0-37.1,31.3-67.2,70-67.2C101.2,231.2,120.2,240.3,133.1,254.6z"></path></g>
+						</svg>
+					</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="userInfor">
+                    <a class="dropdown-item w-50" href="#">Thông tin cá nhân</a>
+                    <a class="dropdown-item w-50" href="#">Bài đăng</a>
+                    <a class="dropdown-item w-50" href="#">Nháp</a>
+                    <a class="dropdown-item w-50" href="#">Cài đặt</a>
+                    <a class="dropdown-item w-50" href="/api/logout">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="loginModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Đăng nhập</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="post" id="form-login" action="#">
+                    <div class="modal-body">
+
+                        <input class="form-control mb-2 sign-in-email" placeholder="Email" name="email"
+                               autocomplete="autocomplete"/>
+                        <div class="invalid-feedback mb-2"></div>
+                        <input class="form-control mb-2 sign-in-password" name="password" type="password"
+                               placeholder="Mật khẩu"
+                               autocomplete="autocomplete"/>
+                        <div class="invalid-feedback"></div>
+                        <div class="forgot-password-wrapper mb-1"></div>
+                        Quên mật khẩu?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary sign-in-btn">Đăng nhập</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="signInModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Đăng ký</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="post" id="form-register" action="#">
+                    <div class="modal-body">
+                        <input type="text" class="sign-up-full-name form-control mb-2" placeholder="Họ và tên *"
+                               autocomplete="autocomplete"/>
+                        <div class="invalid-feedback mb-2"></div>
+                        <input class="sign-up-email form-control mb-2" placeholder="Email *"
+                               autocomplete="autocomplete"/>
+                        <div class="invalid-feedback mb-2"></div>
+                        <input class="sign-up-password form-control mb-2" type="password" placeholder="Mật khẩu *"
+                               autocomplete="autocomplete"/>
+                        <div class="invalid-feedback mb-2"></div>
+                        <input class="sign-up-confirm-password form-control mb-2" type="password"
+                               placeholder="Xác nhận mật khẩu *" autocomplete="autocomplete"/>
+                        <div class="invalid-feedback mb-2"></div>
+                        <div class="privacy-confirm"></div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary sign-up-btn">Đăng ký</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="list">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item mr-5">
+                            <a class="nav-link active w-auto" href="/">Trang chủ <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active dropdown mr-5">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sports
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="d-flex flex-wrap box-size justify-content-between">
+                                    <a class="dropdown-item w-50" href="../html/tinthethao.html">Bóng đá</a>
+                                    <a class="dropdown-item w-50" href="#">Đạp xe</a>
+                                    <a class="dropdown-item w-50" href="#">Bóng chày</a>
+                                    <a class="dropdown-item w-50" href="#">Đua xe</a>
+                                    <a class="dropdown-item w-50" href="#">Golf</a>
+                                    <a class="dropdown-item w-50" href="#">Bóng bầu dục</a>
+                                    <a class="dropdown-item w-50" href="#">Boxing</a>
+                                    <a class="dropdown-item w-50" href="#">Esport</a>
+                                    <a class="dropdown-item w-50" href="#">Tennis</a>
+                                    <a class="dropdown-item w-50" href="#">Bóng chuyền</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link active w-auto" href="../html/video.html">Video</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active w-auto" href="../html/dudoanchuyengia.html">Chuyên gia</a>
+                        </li>
+                    </ul>
+                    <!--                    <form method="post" th:action="/news/${keyword}">-->
+                    <!--                        <input type="search" name="search" id="searchs" placeholder="Tìm kiếm">-->
+                    <!--                        <i class="fas fa-search"></i>-->
+                    <!--                    </form>-->
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+</body>
+</html>
+<!--<script type="text/javascript">-->
+<!--    var blogPosts = [-->
+<!--    {-->
+<!--      category:"Tin tức",-->
+<!--     title: "Anh em nhà Hazard hủy diệt, Bỉ hủy diệt Nga",-->
+<!--      img: "https://www.thenational.ae/image/policy:1.938467:1573965050/08002099.jpg?f=16x9&ư$p$f$w=258f6a0",-->
+<!--      sport: "Bóng đá",-->
+<!--      time:"12/11/2019 12:00a.m",-->
+<!--      content: "Hai anh em nhà Hazard có một ngày thi đấu thăng hoa, qua đó giúp Bỉ mang về chiến thắng đậm trước Nga tại vòng loại EURO 2020.",-->
+<!--      href:"doctintuc.html"-->
+<!--    },-->
+<!--    {-->
+<!--      category:"Chuyên gia",-->
+<!--      title: "Dự đoán kết quả vòng 5 Ngoại hạng Anh cùng chuyên gia Charlie Nicholas",-->
+<!--      img: "https://cdn.bongda365.com/media/2019/10/liverpool-vs-tottenham&#45;&#45;400x230.jpg",-->
+<!--      sport: "Bóng đá",-->
+<!--      time:"13/11/2019 2:00 p.m",-->
+<!--      content:"Sau thời gian nhường chỗ cho các giải đấu thuộc đội tuyển quốc gia, Ngoại hạng Anh sẽ trở lại vào đêm nay. Và chuyên gia bóng đá Charlie Nicholas đã trở lại với những dự đoán về kết quả các trận đấu thuộc vòng 5.",-->
+<!--      href:"tinchuyengia.html"-->
+<!--    },-->
+<!--    {-->
+<!--      category:"video",-->
+<!--      title: "Video Highlight: Cagliari & Inter Milan",-->
+<!--      img: "https://cdn.24h.com.vn/upload/1-2020/images/2020-01-15/Video-highlight-tran-Inter-Milan-&#45;&#45;Cagliari-Choi-loi-Lukaku-dai-tiec-5-ban-man-nhan-i2-1579041994-564-width660height432.jpg",-->
+<!--      sport:"Bóng đá",-->
+<!--      time:"14/11/2019 3:00 p.m",-->
+<!--      content:"Video highlight trận Inter Milan - Cagliari: Chói lọi Lukaku, đại tiệc 5 bàn mãn nhãn",-->
+<!--      href:"doctinvideo.html"-->
+<!--    },-->
+<!--    {-->
+<!--      category:"Tin tức",-->
+<!--      title:"Dhoni mất hợp đồng trung ương Ấn Độ",-->
+<!--      img:"https://e2.365dm.com/19/07/384x216/skysports-ms-dhoni-india-cricket_4714557.jpg?20200116114034",-->
+<!--      sport:"Bóng chày",-->
+<!--      time:"15/11/2019 5:00 p.m",-->
+<!--      content:"Sự nghiệp Ấn Độ của MS Dhoni có thể kết thúc với việc người chơi cờ lê kỳ cựu mất hợp đồng trung tâm vào năm 2020.",-->
+<!--      href:"#"-->
+<!--    }-->
+<!--  ];  -->
+
+<!--      $('#searchs').keyup(function(){-->
+<!--        var strs=$(this).val()-->
+<!--        let z=0-->
+<!--      if(strs.length<4){-->
+<!--      $('main').css('display','block')-->
+<!--      $('.displaynone').css('display','none')-->
+<!--      }else{-->
+<!--        $('main').css('display','none')-->
+<!--        $('.displaynone').empty()-->
+<!--        $('.displaynone').css('display','block')-->
+<!--        $.each(blogPosts,function(index,value){-->
+<!--          var stringreplace=value.title.toLowerCase()-->
+<!--        if(stringreplace.indexOf(strs.toLowerCase())!=-1||(strs.toLowerCase().indexOf(value.sport.toLowerCase())!=-1)||(strs.toLowerCase().indexOf(value.category.toLowerCase())!=-1)){-->
+<!--        if(value.category=="video"){-->
+<!--          $('.displaynone').append(`-->
+<!--          <a href="${value.href}" style="position:relative;" class="d-flex flex-column flex-sm-row col-12 mt-4 w-100">-->
+<!--          <img src="${value.img}" class="w-50" alt="">-->
+<!--          <i class="far fa-play-circle fa-3x" style="position: absolute; bottom:5%; left: 5%; transform: translateX(-50%) translateY(-50%); color:white;"></i>-->
+<!--        <div class="ml-2 w-50">-->
+<!--          <p class="titles">${value.title}</p>-->
+<!--          <div class="d-flex w-100 justify-content-between mb-3">-->
+<!--          <p class="blues">${value.sport}</p>-->
+<!--          <p style="color:#c4c4c4;">${value.time}</p>-->
+<!--          </div>-->
+<!--          <p class="contentss">${value.content}</p>-->
+<!--        </div>-->
+<!--        </a>-->
+<!--          `)-->
+<!--      }else{-->
+<!--        $('.displaynone').append(`-->
+<!--          <a href="${value.href}" class="d-flex flex-column flex-sm-row col-12 mt-4 w-100">-->
+<!--          <img src="${value.img}" class="w-50" alt="">-->
+<!--        <div class="ml-2 w-50">-->
+<!--          <p class="titles">${value.title}</p>-->
+<!--          <div class="d-flex w-100 justify-content-between mb-3">-->
+<!--          <p class="blues">${value.sport}</p>-->
+<!--          <p style="color:#c4c4c4;">${value.time}</p>-->
+<!--          </div>-->
+<!--          <p class="contentss">${value.content}</p>-->
+<!--        </div>-->
+<!--        </a>-->
+<!--          `)-->
+<!--      }-->
+<!--    }else{-->
+<!--      z++-->
+<!--    }-->
+<!--        })-->
+<!--        if(z==blogPosts.length){-->
+<!--        $('.displaynone').append(`<h2 class="mt-4 w-100 text-center">Không có kết quả nào được tìm thấy</h2>`)-->
+<!--        }-->
+<!--      }-->
+<!--})-->
+<!--$('form input').click(function(){-->
+<!--  $(this).css('background','white')-->
+<!--})-->
+<!--$(document).mouseup(function(e){-->
+<!--    var container = $(".dits form input");-->
+
+<!--    // If the target of the click isn't the container-->
+<!--    if(!container.is(e.target) && container.has(e.target).length === 0){-->
+<!--        container.css('background','unset');-->
+<!--    }-->
+<!--});-->
+<!--  -->
+<!--</script>-->

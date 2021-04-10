@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragment/header :: head(~{:: #css-title})">
+    <th:block id="css-title">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/bxhthethao.css}">
+        <title>Bảng xếp hạng bóng đá</title>
+    </th:block>
+</head>
+
+<body>
+<header th:replace="fragment/header :: header"></header>
+<div class="container">
+    <div class="displaynone row">
+    </div>
+</div>
+<main class="container">
+    <p class="mt-3 font-size font-weight-bold">Bóng đá</p>
+    <ul class="list-group list-group-horizontal border border-left-0 border-right-0 mt-3 mb-5 overflow">
+        <li class="list-group-item border-0"><a href="tinthethao.html">Tin tức</a></li>
+        <li class="list-group-item border-0"><a href="videothethao.html">Video</a></li>
+        <li class="list-group-item border-left-0 border-right-0 underlined"><a href="#">Bảng xếp hạng</a></li>
+        <li class="list-group-item border-0"><a href="lichthidauthethao.html">Lịch thi đấu</a></li>
+        <li class="list-group-item border-0"><a href="ketquathidau.html">Kết quả</a></li>
+    </ul>
+    <section>
+        <div class="section-left">
+            <h2>Giải đấu</h2>
+            <div class="line-under"></div>
+            <div class="row mt-4">
+                <div class="col-md-6 col-12 schedule-result mb-4">
+                    <div class="title text-center">Ngoại hạng Anh 2019/20</div>
+                    <div class="d-flex pt-1 pb-1" style="background: #C4C4C4;">
+                        <p style="width: 5%; font-size: 15px;">#</p>
+                        <p style="width: 30%; font-size: 15px;">Đội</p>
+                        <p class="text-center" style="width: 20%; font-size: 15px;">Số trận</p>
+                        <p class="text-center" style="width: 25%; font-size: 15px;">Bàn thắng cách biệt</p>
+                        <p class="text-center" style="width: 20%; font-size: 15px;">Điểm</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%; ">1</p>
+                        <p style="width: 30%;" class="font-weight-bold">Liverpool</p>
+                        <p class="text-center" style="width: 20%; font-size: 18px;">12</p>
+                        <p class="text-center" style="width: 25%;">18</p>
+                        <p class="text-center" style="width: 20%;">34</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">2</p>
+                        <p style="width: 30%;" class="font-weight-bold">Leicester</p>
+                        <p class="text-center" style="width: 20%;">12</p>
+                        <p class="text-center" style="width: 25%;">21</p>
+                        <p class="text-center" style="width: 20%;">26</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">3</p>
+                        <p style="width: 30%;" class="font-weight-bold">Chelsea</p>
+                        <p class="text-center" style="width: 20%;">12</p>
+                        <p class="text-center" style="width: 25%;">10</p>
+                        <p class="text-center" style="width: 20%;">26</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">4</p>
+                        <p style="width: 30%;" class="font-weight-bold">Man City</p>
+                        <p class="text-center" style="width: 20%;">12</p>
+                        <p class="text-center" style="width: 25%;">22</p>
+                        <p class="text-center" style="width: 20%;">25</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">5</p>
+                        <p style="width: 30%;" class="font-weight-bold">Sheff Utd</p>
+                        <p class="text-center" style="width: 20%;">12</p>
+                        <p class="text-center" style="width: 25%;">4</p>
+                        <p class="text-center" style="width: 20%;">17</p>
+                    </div>
+                    <p style="color:rgba(0, 0, 0, 0.75)">Cập nhật: 11/11/2019 5:24pm</p>
+                </div>
+                <div class="col-md-6 col-12 schedule-result mb-4">
+                    <div class="title text-center">Hạng nhất Anh 2019/20</div>
+                    <div class="d-flex pt-1 pb-1" style="background: #C4C4C4; font-size: 15px;">
+                        <p style="width: 5%; font-size: 15px;">#</p>
+                        <p style="width: 30%; font-size: 15px;">Đội</p>
+                        <p class="text-center" style="width: 20%; font-size: 15px;">Số trận</p>
+                        <p class="text-center" style="width: 25%; font-size: 15px;">Bàn thắng cách biệt</p>
+                        <p class="text-center" style="width: 20%; font-size: 15px;">Điểm</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">1</p>
+                        <p style="width: 30%;" class="font-weight-bold">W Brom</p>
+                        <p class="text-center" style="width: 20%;">15</p>
+                        <p class="text-center" style="width: 25%;">12</p>
+                        <p class="text-center" style="width: 20%;">33</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">2</p>
+                        <p style="width: 30%;" class="font-weight-bold">Preston</p>
+                        <p class="text-center" style="width: 20%;">16</p>
+                        <p class="text-center" style="width: 25%;">14</p>
+                        <p class="text-center" style="width: 20%;">31</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">3</p>
+                        <p style="width: 30%;" class="font-weight-bold">Leeds</p>
+                        <p class="text-center" style="width: 20%;">16</p>
+                        <p class="text-center" style="width: 25%;">12</p>
+                        <p class="text-center" style="width: 20%;">31</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">4</p>
+                        <p style="width: 30%;" class="font-weight-bold">Swansea</p>
+                        <p class="text-center" style="width: 20%;">16</p>
+                        <p class="text-center" style="width: 25%;">6</p>
+                        <p class="text-center" style="width: 20%;">29</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">5</p>
+                        <p style="width: 30%;" class="font-weight-bold">N Forest</p>
+                        <p class="text-center" style="width: 20%;">15</p>
+                        <p class="text-center" style="width: 25%;">7</p>
+                        <p class="text-center" style="width: 20%;">28</p>
+                    </div>
+                    <p style="color:rgba(0, 0, 0, 0.75)">Cập nhật: 11/11/2019 5:24pm</p>
+                </div>
+                <div class="col-md-6 col-12 schedule-result mb-4">
+                    <div class="title text-center">Cúp C1 châu Âu - nhóm A 2019/20</div>
+                    <div class="d-flex pt-1 pb-1" style="background: #C4C4C4;">
+                        <p style="width: 5%; font-size: 15px;">#</p>
+                        <p style="width: 30%; font-size: 15px;">Đội</p>
+                        <p class="text-center" style="width: 20%; font-size: 15px;">Số trận</p>
+                        <p class="text-center" style="width: 25%; font-size: 15px;">Bàn thắng cách biệt</p>
+                        <p class="text-center" style="width: 20%; font-size: 15px;">Điểm</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">1</p>
+                        <p style="width: 30%;" class="font-weight-bold">PSG</p>
+                        <p class="text-center" style="width: 20%;">4</p>
+                        <p class="text-center" style="width: 25%;">10</p>
+                        <p class="text-center" style="width: 20%;">34</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">2</p>
+                        <p style="width: 30%;" class="font-weight-bold">R Madrid</p>
+                        <p class="text-center" style="width: 20%;">4</p>
+                        <p class="text-center" style="width: 25%;">4</p>
+                        <p class="text-center" style="width: 20%;">26</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">3</p>
+                        <p style="width: 30%;" class="font-weight-bold">Club Brugge</p>
+                        <p class="text-center" style="width: 20%;">4</p>
+                        <p class="text-center" style="width: 25%;">-6</p>
+                        <p class="text-center" style="width: 20%;">26</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">4</p>
+                        <p style="width: 30%;" class="font-weight-bold">Galatasaray</p>
+                        <p class="text-center" style="width: 20%;">4</p>
+                        <p class="text-center" style="width: 25%;">-8</p>
+                        <p class="text-center" style="width: 20%;">25</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">5</p>
+                        <p style="width: 30%;" class="font-weight-bold">N Forest</p>
+                        <p class="text-center" style="width: 20%;">15</p>
+                        <p class="text-center" style="width: 25%;">7</p>
+                        <p class="text-center" style="width: 20%;">28</p>
+                    </div>
+                    <p style="color:rgba(0, 0, 0, 0.75)">Cập nhật: 11/11/2019 5:24pm</p>
+                </div>
+                <div class="col-md-6 col-12 schedule-result mb-4">
+                    <div class="title text-center">Cúp C2 - nhóm A 2019/20</div>
+                    <div class="d-flex pt-1 pb-1" style="background: #C4C4C4;">
+                        <p style="width: 5%; font-size: 15px;">#</p>
+                        <p style="width: 30%; font-size: 15px;">Đội</p>
+                        <p class="text-center" style="width: 20%; font-size: 15px;">Số trận</p>
+                        <p class="text-center" style="width: 25%; font-size: 15px;">Bàn thắng cách biệt</p>
+                        <p class="text-center" style="width: 20%; font-size: 15px;">Điểm</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">1</p>
+                        <p style="width: 30%;" class="font-weight-bold">Servilla</p>
+                        <p class="text-center" style="width: 20%;">16</p>
+                        <p class="text-center" style="width: 25%;">12</p>
+                        <p class="text-center" style="width: 20%;">33</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">2</p>
+                        <p style="width: 30%;" class="font-weight-bold">Apoel</p>
+                        <p class="text-center" style="width: 20%;">16</p>
+                        <p class="text-center" style="width: 25%;">14</p>
+                        <p class="text-center" style="width: 20%;">31</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">3</p>
+                        <p style="width: 30%;" class="font-weight-bold">Quarabag</p>
+                        <p class="text-center" style="width: 20%;">16</p>
+                        <p class="text-center" style="width: 25%;">12</p>
+                        <p class="text-center" style="width: 20%;">31</p>
+                    </div>
+                    <div class="d-flex result pt-1 pb-1">
+                        <p style="width: 5%;">4</p>
+                        <p style="width: 30%;" class="font-weight-bold">F91 Dudgelange</p>
+                        <p class="text-center" style="width: 20%;">16</p>
+                        <p class="text-center" style="width: 25%;">6</p>
+                        <p class="text-center" style="width: 20%;">29</p>
+                    </div>
+                    <p style="color:rgba(0, 0, 0, 0.75)">Cập nhật: 11/11/2019 5:24pm</p>
+                </div>
+            </div>
+        </div>
+        <div class="side-news">
+
+        </div>
+    </section>
+</main>
+<footer th:replace="fragment/footer :: footer"></footer>
+</body>
+</html>

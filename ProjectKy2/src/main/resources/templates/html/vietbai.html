@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragment/header :: head(~{:: #css-title})">
+    <th:block id="css-title">
+        <title>Viết bài</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/vietbai.css}"/>
+        <script th:src="@{/ckeditor/ckeditor.js}"></script>
+    </th:block>
+</head>
+<body>
+<header th:replace="fragment/header :: header"></header>
+<main class="container">
+    <form action="/post" th:object="${post}" method="post" enctype="multipart/form-data">
+        <input type="hidden" th:field="*{id}"/>
+                <input type="hidden" th:field="*{user_id}"/>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" th:field="*{title}" class="form-control" id="title" placeholder="Title of your post">
+            <p class="alert alert-danger" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">title Error></p>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <label for="content" class="form-label">Content</label>
+            <textarea id="editor" name="content" class="form-control" rows="10" cols="70"></textarea>
+            <p class="alert alert-danger" th:if="${#fields.hasErrors('content')}" th:errors="*{content}">Content Error></p>
+        </div>
+        <div>
+            <table>
+                <tr><td>File to upload:</td><td><input type="file" name="file" id="fileImage" accept="image/png, image/jpeg"/></td></tr>
+            </table>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</main>
+<footer th:replace="fragment/footer :: footer"></footer>
+</body>
+<script type="text/javascript">
+    CKEDITOR.replace('editor');
+</script>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragment/header :: head(~{:: #css-title})">
+    <th:block id="css-title">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/tinthethao.css}">
+        <title>Tin tức bóng đá</title>
+    </th:block>
+</head>
+<body>
+<header th:replace="fragment/header :: header"></header>
+<div class="container">
+    <div class="displaynone row">
+        <!-- <a href="#" class="d-flex flex-column flex-md-row col-12 col-md-11 mt-4"> -->
+        <!-- <img src="assets/images/Rectangle 20.jpg" alt="">
+        <div class="ml-2">
+            <p class="title">Dier ra trận với căn bệnh</p>
+            <div class="d-flex w-100 justify-content-between mb-3">
+            <p class="blue">Bóng đá</p>
+            <p>08/11/19 8:35am</p>
+            </div>
+            <p class="contents">Eric Dier đã nói về sự thất vọng của anh về cách sự nghiệp bị đình trệ chỉ vì một cơn viêm ruột thừa năm ngoái.</p>
+        </div> -->
+        <!-- </a> -->
+    </div>
+</div>
+<main class="container">
+    <p class="mt-3 font-size font-weight-bold">Bóng đá</p>
+    <ul class="list-group list-group-horizontal border border-left-0 border-right-0 mt-3 mb-5 overflow">
+        <li class="list-group-item underlined border-left-0 border-top-0"><a href="tinthethao.html">Tin tức</a></li>
+        <li class="list-group-item border-0"><a href="videothethao.html">Video</a></li>
+        <li class="list-group-item border-0"><a href="bxhthethao.html">Bảng xếp hạng</a></li>
+        <li class="list-group-item border-0"><a href="lichthidauthethao.html">Lịch thi đấu</a></li>
+        <li class="list-group-item border-0"><a href="ketquathidau.html">Kết quả</a></li>
+    </ul>
+    <section>
+        <div class="section-left">
+            <div class="row">
+                <a href="#" class="col-12 new-football d-flex flex-column">
+                    <img src="../../static/images/players.jpg" alt="">
+                    <div class="content p-3 background">
+                        <p class="title">Hudson-Odoi, Ox trở lại Anh; không có Grealish</p>
+                        <p class="contents mt-3 	mb-3">Callum Hudson-Odoi và Alex Oxlade-Chamberlain đã được gọi trở
+                            lại đội tuyển Anh, nhưng không có chỗ cho Jack Grealish.</p>
+                    </div>
+                </a>
+                <a href="#" class="col-6 new-football d-flex flex-column mt-3">
+                    <img src="../../static/images/aa.jpg" alt="">
+                    <div class="content pt-2">
+                        <p class="title">Chiến thắng của Celtic tại Lazio để giành quyền vào vòng 32</p>
+                        <p class="contents">Olivier Ntcham đã ghi bàn thắng ở phút thứ 95 khi Celtic đăng ký chiến thắng
+                            đầu tiên của họ ở Ý để đánh bại Lazio 2-1 và đủ điều kiện cho vòng đấu loại trực tiếp Europa
+                            League.</p>
+                    </div>
+                </a>
+                <a href="#" class="col-6 new-football d-flex flex-column mt-3">
+                    <img src="../../static/images/bb.jpg" alt="">
+                    <div class="content pt-2">
+                        <p class="title">Tiêu đề mới của Jimenez giúp Wolves đi đúng hướng</p>
+                        <p class="contents">CĐòn tấn công trong thời gian chấn thương của Raul Jimenez đã chứng kiến
+                            Wolves đánh bại Slovan với tỷ số 1-0 để đưa đội bóng của Nuno Espirito Santo vào khoảng cách
+                            gần với vòng loại trực tiếp Europa League.</p>
+                    </div>
+                </a>
+            </div>
+            <p class="latest mt-5 mb-4">Mới nhất</p>
+            <div class="block"></div>
+            <div class="row list-new w-100">
+                <a href="#" class="d-flex flex-column flex-md-row col-12 mt-4">
+                    <img src="../../static/images/Rectangle%2020.jpg" alt="">
+                    <div class="ml-md-2">
+                        <p class="title">Dier ra trận với căn bệnh</p>
+                        <div class="d-flex w-100 justify-content-between mb-3">
+                            <p class="blue">Bóng đá</p>
+                            <p>08/11/19 8:35am</p>
+                        </div>
+                        <p class="contents">Eric Dier đã nói về sự thất vọng của anh về cách sự nghiệp bị đình trệ chỉ
+                            vì một cơn viêm ruột thừa năm ngoái.</p>
+                    </div>
+                </a>
+                <a href="#" class="d-flex flex-column flex-md-row col-12 mt-4 w-100">
+                    <img src="../../static/images/skysports-paper-talk-papers_4819668.jpg" alt="">
+                    <div class="ml-md-2">
+                        <p class="title">Giấy tờ: Man Utd mong đợi sự tiếp đón thù địch</p>
+                        <div class="d-flex w-100 justify-content-between mb-3">
+                            <p class="blue">Bóng đá</p>
+                            <p>08/01/20 8:00pm</p>
+                        </div>
+                        <p class="contents">Tất cả những câu chuyện hàng đầu và tin đồn chuyển từ các trang sau của các
+                            tờ báo quốc gia Thứ Sáu...</p>
+                    </div>
+                </a>
+                <a href="#" class="d-flex flex-column flex-md-row col-12 mt-4">
+                    <img src="../../static/images/skysports-patrick-vieira-arsene-wenger_4893712.jpg" alt="">
+                    <div class="ml-md-2">
+                        <p class="title">Vieira: Công việc của Arsenal không nằm trong suy nghĩ của tôi</p>
+                        <div class="d-flex w-100 justify-content-between mb-3">
+                            <p class="blue">Bóng đá</p>
+                            <p>09/01/20 7:00am</p>
+                        </div>
+                        <p class="contents">Patrick Vieira tiết lộ rằng anh không quan tâm đến công việc của Arsenal khi
+                            nó trở nên khả dụng sau lối ra của Unai Emery.</p>
+                    </div>
+                </a>
+                <a href="#" class="d-flex flex-column flex-md-row col-12 mt-4">
+                    <img src="https://e1.365dm.com/20/01/384x216/skysports-layvin-kurzawa-psg_4893916.jpg?20200117102908"
+                         alt="">
+                    <div class="ml-md-2">
+                        <p class="title">Kurzawa thay đổi đại lý giữa các liên kết Arsenal</p>
+                        <div class="d-flex w-100 justify-content-between mb-3">
+                            <p class="blue">Bóng đá</p>
+                            <p>11/01/20 8:35pm</p>
+                        </div>
+                        <p class="contents">Hậu vệ Layvin Kurzawa của Paris Saint-Germain tuyên bố rằng anh ta đã thay
+                            đổi các đặc vụ trong bối cảnh đầu cơ liên kết anh ta với việc chuyển đến Arsenal.</p>
+                    </div>
+                </a>
+                <a href="#" class="flex-column flex-md-row col-12 mt-4 disnone">
+                    <img src="https://e1.365dm.com/20/01/384x216/skysports-ashley-fletcher-jonathan-woodgate_4893391.jpg?20200116165540"
+                         alt="">
+                    <div class="ml-md-2">
+                        <p class="title">Fletcher thắng Mục tiêu của tháng</p>
+                        <div class="d-flex w-100 justify-content-between mb-3">
+                            <p class="blue">Bóng đá</p>
+                            <p>10/01/20 8:00am</p>
+                        </div>
+                        <p class="contents">Ashley Fletcher của Middlesbrough giành chức vô địch; Kyle Vassell của
+                            Rotherham chiến thắng tại League One; Jordan Maguire-Drew của Leyton Orient giành chiến
+                            thắng trong League Two.</p>
+                    </div>
+                </a>
+                <a href="#" class="flex-column flex-md-row col-12 mt-4 disnone">
+                    <img src="../../static/images/Rectangle%2020.jpg" alt="">
+                    <div class="ml-md-2">
+                        <p class="title">Dier ra trận với căn bệnh</p>
+                        <div class="d-flex w-100 justify-content-between mb-3">
+                            <p class="blue">Bóng đá</p>
+                            <p>08/11/19 8:35am</p>
+                        </div>
+                        <p class="contents">Eric Dier đã nói về sự thất vọng của anh về cách sự nghiệp bị đình trệ chỉ
+                            vì một cơn viêm ruột thừa năm ngoái.</p>
+                    </div>
+                </a>
+            </div>
+            <button class="shows mt-5 mb-5">Hiện thêm</button>
+
+        </div>
+        <div class="side-news"></div>
+    </section>
+</main>
+<footer th:replace="fragment/footer :: footer"></footer>
+</body>
+</html>

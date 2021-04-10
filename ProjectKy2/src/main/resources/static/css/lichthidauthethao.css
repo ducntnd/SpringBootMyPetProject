@@ -1,0 +1,57 @@
+
+a{
+	color: black;
+}
+section{
+	display: flex;
+	justify-content: space-between;
+}
+body{
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+}
+a:hover{
+	text-decoration: none;
+	color: black;
+}
+a p:hover{
+	color: blue;
+}
+.underlined{
+	border-bottom: 5px solid red;
+}
+.font-size{
+	font-size: 35px;
+}
+.section-left{
+	width: 65%;
+}
+.side-news{
+	width: 33%;
+}
+.date{
+	border:none;
+	background-color: unset;
+}
+.block{
+	border:1px solid black;
+}
+.dayOfMonth{
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.size{
+	font-size: 15px;
+}
+.schedule{
+	display: none;
+}
+@media(max-width: 768px){
+	.section-left{
+		width: 100%;
+	}
+	.side-news{
+		display: none;
+	}
+}

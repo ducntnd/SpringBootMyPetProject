@@ -1,0 +1,45 @@
+
+a{
+	color: black;
+}
+
+section{
+	display: flex;
+	justify-content: space-between;
+}
+
+body{
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+}
+a:hover{
+	text-decoration: none;
+	color: black;
+}
+a p:hover{
+	color: blue;
+}
+.underlined{
+	border-bottom: 5px solid red;
+}
+
+.font-size{
+	font-size: 35px;
+}
+.section-left{
+	width: 65%;
+}
+.side-news{
+	width: 33%;
+	}
+.line-under{
+	border: 2px solid black;
+}
+@media(max-width: 768px){
+	.section-left{
+		width: 100%;
+	}
+	.side-news{
+		display: none;
+	}
+}

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragment/header :: head(~{:: #css-title})">
+    <th:block id="css-title">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/lichthidauthethao.css}">
+        <title>Lịch thi đấu bóng đá</title>
+    </th:block>
+</head>
+<body>
+<header th:replace="fragment/header :: header"></header>
+<div class="container">
+    <div class="displaynone row">
+    </div>
+</div>
+<main class="container">
+    <p class="mt-3 font-size font-weight-bold">Bóng đá</p>
+    <ul class="list-group list-group-horizontal border border-left-0 border-right-0 mt-3 mb-5 overflow">
+        <li class="list-group-item border-0"><a href="tinthethao.html">Tin tức</a></li>
+        <li class="list-group-item border-0"><a href="videothethao.html">Video</a></li>
+        <li class="list-group-item border-0"><a href="bxhthethao.html">Bảng xếp hạng</a></li>
+        <li class="list-group-item border-left-0 border-right-0 underlined"><a href="#">Lịch thi đấu</a></li>
+        <li class="list-group-item border-0"><a href="ketquathidau.html">Kết quả</a></li>
+    </ul>
+    <section>
+        <div class="section-left">
+            <button class="date pr-4 pt-2 pb-2 click" style="position: relative;">Ngày <i
+                    class="fas fa-chevron-down"></i></button>
+            <div class="block"></div>
+            <div class="schedule" style="position: absolute; width: 300px; height: 50px; z-index: 200;">
+                <div class="d-flex justify-content-between align-items-center" style="background-color:#011b51;">
+                    <button class="date back"><i class="fas fa-chevron-left" style="color: white;"></i></button>
+                    <div>
+                        <p class="font-weight-bold 120" style="color: white;">Tháng 1, 2020</p>
+                        <p class="font-weight-bold 220" style="color: white; display: none;">Tháng 2, 2020</p>
+                        <p class="font-weight-bold 1219" style="color: white; display: none;">Tháng 12, 2019</p>
+                    </div>
+                    <button class="date next"><i class="fas fa-chevron-right" style="color: white;"></i></button>
+                </div>
+                <div class="w-100 d-flex size justify-content-between flex-wrap" style="background-color: white;">
+                    <div class="pr-2 pl-2 pt-1 pb-1">T2</div>
+                    <div class="pr-2 pl-2 pt-1 pb-1">T3</div>
+                    <div class="pr-2 pl-2 pt-1 pb-1">T4</div>
+                    <div class="pr-2 pl-2 pt-1 pb-1">T5</div>
+                    <div class="pr-2 pl-2 pt-1 pb-1">T6</div>
+                    <div class="pr-2 pl-2 pt-1 pb-1">T7</div>
+                    <div class="pr-2 pl-2 pt-1 pb-1">CN</div>
+                    <div class="dayofmonth w-100">
+                        <div class="dayOfMonth 1-2020">
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <button type="button" disabled>
+                                <div class="p-2 n">1</div>
+                            </button>
+                            <button type="button" disabled>
+                                <div class="p-2 n">2</div>
+                            </button>
+                            <button type="button" disabled>
+                                <div class="p-2 n">3</div>
+                            </button>
+                            <button type="button" disabled>
+                                <div class="p-2 n">4</div>
+                            </button>
+                            <button type="button" disabled>
+                                <div class="p-2 n">5</div>
+                            </button>
+                            <button type="button" disabled>
+                                <div class="p-2 n">6</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">7</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">8</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">9</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">10</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">11</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">12</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">13</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">14</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">15</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">16</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">17</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">18</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">19</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">20</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">21</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">22</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">23</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">24</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">25</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">26</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">27</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">28</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">29</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">30</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">31</div>
+                            </button>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                        </div>
+                        <div class="dayOfMonth 12-2019 w-100" style="display: none;">
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <button type="button" disabled>
+                                <div class="p-2 n" style="border:1px solid lightgrey;">1</div>
+                            </button>
+                            <button type="button" disabled>
+                                <div class="p-2 n" style="border:1px solid lightgrey;">2</div>
+                            </button>
+                            <button type="button" disabled>
+                                <div class="p-2 n" style="border:1px solid lightgrey;">3</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">4</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">5</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">6</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">7</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">8</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">9</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">10</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">11</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">12</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">13</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">14</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">15</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">16</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">17</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">18</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">19</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">20</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">21</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">22</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">23</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">24</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">25</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">26</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">27</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">28</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">29</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">30</div>
+                            </button>
+                            <button>
+                                <div class="p-2 n">31</div>
+                            </button>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                            <div class="p-2" style="background-color: lightgrey; border:1px solid black;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="font-weight-bold d-flex justify-content-center w-100 mt-3 font-size month-year">Tháng 1, năm
+                    2020
+                </div>
+                <div id="display" class="8t1n20">
+                    <div class="schedule-result mt-3">
+                        <div class="text-center pt-1 pb-1 font-weight-bold" style="background: #5811EE; color: white;">
+                            Thứ 4, ngày 8 tháng 1
+                        </div>
+                        <div class="text-center pt-1 pb-1" style="background: #C4C4C4;">Giải bóng đá ngoại hạng Anh
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Brighton and Hove Albion</div>
+                            <p>12:30</p>
+                            <div class="font-weight-bold" style="width: 45%">Chelsea</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Burnsley</div>
+                            <p>12:30</p>
+                            <div class="font-weight-bold" style="width: 45%">Aston Villa</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Newcastle United</div>
+                            <p>15:00</p>
+                            <div class="font-weight-bold" style="width: 45%">Leicester City</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Southampton</div>
+                            <p>15:00</p>
+                            <div class="font-weight-bold" style="width: 45%">Tottenham Hotspur</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Watford</div>
+                            <p>15:00</p>
+                            <div class="font-weight-bold" style="width: 45%">Wolverhampton Wanderers</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Manchester City</div>
+                            <p>17:30</p>
+                            <div class="font-weight-bold" style="width: 45%">Everton</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 mb-2 justify-content-between">
+                            <div class="font-weight-bold text-right" style="width: 45%">Arsenal</div>
+                            <p>20:00</p>
+                            <div class="font-weight-bold" style="width: 45%">Manchester United</div>
+                        </div>
+                        <div class="text-center pt-1 pb-1" style="background: #C4C4C4; ">Giải hạng nhất Anh</div>
+                        <div class="d-flex pt-2 pb-2 mb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Millwall</div>
+                            <p>12:45</p>
+                            <div class="font-weight-bold" style="width: 45%">Luton Town</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Birmingham City</div>
+                            <p>15:00</p>
+                            <div class="font-weight-bold" style="width: 45%">Wigan Athletic</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Sheffield Wednesday</div>
+                            <p>15:00</p>
+                            <div class="font-weight-bold" style="width: 45%">Hull City</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 mb-2 justify-content-between">
+                            <div class="font-weight-bold text-right" style="width: 45%">West Bromwich Albion</div>
+                            <p>17:15</p>
+                            <div class="font-weight-bold" style="width: 45%">Leeds United</div>
+                        </div>
+                        <div class="text-center pt-1 pb-1" style="background: #C4C4C4; ">League One</div>
+                        <div class="d-flex pt-2 pb-2 mb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">AFC Wimbledon</div>
+                            <p>15:00</p>
+                            <div class="font-weight-bold" style="width: 45%">Southend United</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Accrington Stanley</div>
+                            <p>15:00</p>
+                            <div class="font-weight-bold" style="width: 45%">Rochdale</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Lincoln City</div>
+                            <p>15:00</p>
+                            <div class="font-weight-bold" style="width: 45%">Peterborough United</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Tranmere Rovers</div>
+                            <p>15:00</p>
+                            <div class="font-weight-bold" style="width: 45%">Coventry City</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="display" class="7t1n20" style="display: none;">
+                    <div class="schedule-result mt-3">
+                        <div class="text-center pt-1 pb-1 font-weight-bold" style="background: #5811EE; color: white;">
+                            Thứ 3, ngày 7 tháng 1
+                        </div>
+                        <div class="text-center pt-1 pb-1" style="background: #C4C4C4;">Giải bóng đá ngoại hạng Anh
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Brighton and Hove Albion</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Chelsea</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Burnsley</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Aston Villa</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Newcastle United</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Leicester City</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Southampton</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Tottenham Hotspur</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Watford</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Wolverhampton Wanderers</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Manchester City</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Everton</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 mb-2 justify-content-between">
+                            <div class="font-weight-bold text-right" style="width: 45%">Arsenal</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Manchester United</div>
+                        </div>
+                        <div class="text-center pt-1 pb-1" style="background: #C4C4C4; ">Giải hạng nhất Anh</div>
+                        <div class="d-flex pt-2 pb-2 mb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Millwall</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Luton Town</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Birmingham City</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Wigan Athletic</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Sheffield Wednesday</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Hull City</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 mb-2 justify-content-between">
+                            <div class="font-weight-bold text-right" style="width: 45%">West Bromwich Albion</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Leeds United</div>
+                        </div>
+                        <div class="text-center pt-1 pb-1" style="background: #C4C4C4; ">League One</div>
+                        <div class="d-flex pt-2 pb-2 mb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">AFC Wimbledon</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Southend United</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Accrington Stanley</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Rochdale</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Lincoln City</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Peterborough United</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Tranmere Rovers</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Coventry City</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="display" class="31t12n19" style="display: none;">
+                    <div class="schedule-result mt-3">
+                        <div class="text-center pt-1 pb-1 font-weight-bold" style="background: #5811EE; color: white;">
+                            Thứ 3, ngày 31 tháng 12
+                        </div>
+                        <div class="text-center pt-1 pb-1" style="background: #C4C4C4;">Giải bóng đá ngoại hạng Anh
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Brighton and Hove Albion</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Chelsea</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Burnsley</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Aston Villa</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Newcastle United</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Leicester City</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Southampton</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Tottenham Hotspur</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Watford</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Wolverhampton Wanderers</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Manchester City</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Everton</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 mb-2 justify-content-between">
+                            <div class="font-weight-bold text-right" style="width: 45%">Arsenal</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Manchester United</div>
+                        </div>
+                        <div class="text-center pt-1 pb-1" style="background: #C4C4C4; ">Giải hạng nhất Anh</div>
+                        <div class="d-flex pt-2 pb-2 mb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Millwall</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Luton Town</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Birmingham City</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Wigan Athletic</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Sheffield Wednesday</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Hull City</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 mb-2 justify-content-between">
+                            <div class="font-weight-bold text-right" style="width: 45%">West Bromwich Albion</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Leeds United</div>
+                        </div>
+                        <div class="text-center pt-1 pb-1" style="background: #C4C4C4; ">League One</div>
+                        <div class="d-flex pt-2 pb-2 mb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">AFC Wimbledon</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Southend United</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Accrington Stanley</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Rochdale</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Lincoln City</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Peterborough United</div>
+                        </div>
+                        <div class="d-flex pt-2 pb-2 justify-content-between"
+                             style="border-bottom:1px solid lightgrey;">
+                            <div class="font-weight-bold text-right" style="width: 45%">Tranmere Rovers</div>
+                            <p class="ml-1 mr-1 ratio pt-1 pb-1 pl-2 pr-2">1-2</p>
+                            <div class="font-weight-bold" style="width: 45%">Coventry City</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="side-news"></div>
+    </section>
+</main>
+<footer th:replace="fragment/footer :: footer"></footer>
+</body>
+</html>

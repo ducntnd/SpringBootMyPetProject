@@ -1,0 +1,63 @@
+@import '';
+@import '';
+@import 's';
+body{
+	font-size: 20px;
+	font-family: 'Roboto Condensed';
+}
+section{
+	width: 65%;
+}
+.side-news{
+	width: 33%;
+}
+a{
+	color: black;
+}
+a:hover{
+	text-decoration: none;
+	color: black;
+}
+a p:hover{
+	color: blue;
+}
+@media(max-width: 768px){
+	section{
+		width: 100%;
+	}
+	.side-news{
+		display: none;
+	}
+}
+main{
+	display: flex;
+	justify-content: space-between;
+}
+.title{
+	font-weight: bold;
+	font-size:30px;
+}
+.side-title{
+	color: rgba(0, 0, 0, 0.38);
+}
+.block{
+	border: 1px solid rgba(0, 0, 0, 0.52);
+}
+td{
+	text-align: center;
+}
+.box,.box1{
+	padding:5px 10px 5px 10px;
+	border-radius: 10%;
+}
+.box{
+	background: red;
+}
+.box1{
+	background-color: green;
+}
+@media(max-width: 568px){
+	table{
+		font-size: 15px;
+	}
+}
