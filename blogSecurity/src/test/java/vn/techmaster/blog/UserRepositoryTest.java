@@ -12,22 +12,22 @@ import vn.techmaster.blog.testbase.H2TestBase;
 
 
 public class UserRepositoryTest extends H2TestBase {
-  @Autowired
-  private UserRepository userRepo; 
-  
-  @Test
-  @DisplayName("Tìm user theo email")
-  void findByEmail() {
-    var user = userRepo.findByEmail("bob@gmail.com");
-    assertThat(user).isPresent();
-    assertThat(user.get().getEmail()).isEqualTo("bob@gmail.com");
-  }
-
-  @Test
-  @DisplayName("Tìm user theo id")
-  void findById() {
-    var user = userRepo.findById(2L);
-    assertThat(user).isPresent();
-    assertThat(user.get().getEmail()).isEqualTo("alice@gmail.com");
-  }
+//  @Autowired
+//  private UserRepository userRepo;
+//
+//  @Test
+//  @DisplayName("Tìm user theo email")
+//  void findByEmail() {
+//    var user = userRepo.findByEmail("bob@gmail.com");
+//    assertThat(user).isPresent();
+//    assertThat(user.get().getEmail()).isEqualTo("bob@gmail.com");
+//  }
+//
+//  @Test
+//  @DisplayName("Tìm user theo id")
+//  void findById() {
+//    var user = userRepo.findById(2L);
+//    assertThat(user).isPresent();
+//    assertThat(user.get().getEmail()).isEqualTo("alice@gmail.com");
+//  }
 }

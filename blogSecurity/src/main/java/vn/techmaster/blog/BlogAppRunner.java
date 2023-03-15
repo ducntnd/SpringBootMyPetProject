@@ -18,7 +18,7 @@ public class BlogAppRunner implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    authenService.generateUsersRoles();
-    postService.generateSampleData();
+//    authenService.generateUsersRoles();
+//    postService.generateSampleData();
   }
 }

@@ -9,5 +9,4 @@ import vn.techmaster.blog.model.User;
 public interface UserMapper {
   UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
   UserInfo userToUserInfo(User user);
-  User userInfoToUser(UserInfo userInfo);
 }
